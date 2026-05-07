@@ -1,4 +1,4 @@
-﻿# E-Commerce Node.js API
+﻿# E-School Node.js API
 
 مشروع API لإدارة منصة مدرسة إلكترونية بسيطة باستخدام Node.js وExpress وMySQL.
 
