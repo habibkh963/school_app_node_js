@@ -1,12 +1,12 @@
 ﻿# E-Commerce Node.js API
 
-مشروع API لإدارة منصة تجارة إلكترونية بسيطة باستخدام Node.js وExpress وMySQL.
+مشروع API لإدارة منصة مدرسة إلكترونية بسيطة باستخدام Node.js وExpress وMySQL.
 
 ---
 
 ## نظرة عامة
 
-هذا المشروع يقدم واجهة برمجية لإدارة المستخدمين والدورات (المنتجات) مع حماية JWT ودعم اللغة العربية والإنجليزية.
+هذا المشروع يقدم واجهة برمجية لإدارة المستخدمين والدورات  مع حماية JWT ودعم اللغة العربية والإنجليزية.
 
 ---
 
@@ -56,12 +56,8 @@ school_app_node_js/
 │   │   ├── auth.middlewares.js
 │   │   └── lang.middleware.js
 │   ├── models/
-│   │   ├── category.model.js
 │   │   ├── courses.model.js
 │   │   ├── enrollments.model.js
-│   │   ├── favorites.model.js
-│   │   ├── order.item.model.js
-│   │   ├── cart.model.js
 │   │   └── user.model.js
 │   ├── routes/
 │   │   ├── auth.routes.js
@@ -104,7 +100,7 @@ npm install
 PORT=5000
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=ecommerce
+DB_NAME=school_db
 DB_USER=root
 DB_PASS=your_password
 JWT_SECRET=your_secret_key
@@ -138,7 +134,7 @@ node src/server.js
 
 ## مسارات API
 
-### القاعدة
+### DataBase
 
 ```
 http://localhost:5000/api
