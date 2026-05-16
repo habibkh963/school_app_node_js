@@ -8,8 +8,10 @@ app.get("/", (req, res) => {
 });
 const coursesRoutes = require("./routes/courses.routes");
 app.use("/api/cources", coursesRoutes);
-const enrollmentsRoute = require("./routes/enrolments.routes");
-
+const gradesRoute = require("./routes/grades.routes");
+app.use("/api/grades", gradesRoute);
+const enrollmentsRoute = require("./routes/enrollments.routes");
+app.use("/api/enrollment", enrollmentsRoute);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/api/auth", authRoutes);

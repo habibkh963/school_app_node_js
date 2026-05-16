@@ -3,7 +3,7 @@ const sequelize = require("../config/db");
 const User = require("./user.model");
 
 const Courses = require("./courses.model");
-
+const Grades = require("./grades.model");
 // const Cart = require("./cart.model");
 
 // const CartItem = require("./cart.item.model");
@@ -35,6 +35,24 @@ Enrollment.belongsTo(Courses, {
     foreignKey: "course_id",
 
 });
+User.hasMany(Grades, {
+    foreignKey: "user_id",
+
+});
+Grades.belongsTo(User, {
+    foreignKey: "user_id",
+
+});
+Courses.hasOne(Grades, {
+    foreignKey: "course_id",
+
+});
+Grades.belongsTo(Courses, {
+    foreignKey: "course_id",
+
+});
+
+
 // Order.belongsTo(Cart,);
 
 // Cart.hasOne(Order,);
@@ -51,7 +69,7 @@ module.exports = {
 
 
     Enrollment,
-
+    Grades,
 
 
 };

@@ -3,7 +3,8 @@
 مشروع API لإدارة منصة مدرسة إلكترونية بسيطة باستخدام Node.js وExpress وMySQL.
 
 ---
-
+## رابط التوثيق 
+https://documenter.getpostman.com/view/25618954/2sBXqRiGCs
 ## نظرة عامة
 
 هذا المشروع يقدم واجهة برمجية لإدارة المستخدمين والدورات  مع حماية JWT ودعم اللغة العربية والإنجليزية.
@@ -62,11 +63,11 @@ school_app_node_js/
 │   ├── routes/
 │   │   ├── auth.routes.js
 │   │   ├── courses.routes.js
+│   │   ├── grades.routes.js
 │   │   └── enrolments.routes.js
 │   ├── services/
 │   └── utils/
 │       └── generate_token.js
-├── swagger.js
 └── package.json
 ```
 
@@ -187,17 +188,12 @@ Authorization: Bearer <YOUR_JWT_TOKEN>
 - `src/locales/ar.js`
 - `src/locales/en.js`
 
----
-
-## Swagger
-
-هناك إعداد Swagger جاهز في `swagger.js`. يمكن ربطه بالتطبيق لتوفير واجهة وثائق عبر `/api-docs`.
 
 ---
 
 ## ملاحظات
 
-- بعض النماذج مثل `enrollments` و`favorites` و`cart` موجودة لكنها ليست مفعلة بالكامل في المسارات الحالية.
+- بعض النماذج مثل `enrollments` وموجودة لكنها ليست مفعلة بالكامل في المسارات الحالية.
 - يجب وضع قيمة سليمة في `JWT_SECRET` لحماية الرموز.
 
 ---
@@ -218,6 +214,4 @@ Authorization: Bearer <YOUR_JWT_TOKEN>
 - jsonwebtoken
 - express-validator
 - dotenv
-- swagger-jsdoc
-- swagger-ui-express
 - nodemon
